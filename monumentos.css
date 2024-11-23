@@ -1,0 +1,81 @@
+/* Estilos generales para el cuerpo y HTML */
+body, html {
+  margin: 0; /* Elimina el margen predeterminado */
+  padding: 0; /* Elimina el padding predeterminado */
+  height: 100%; /* Altura del 100% para ocupar todo el viewport */
+  font-family: Arial, sans-serif; /* Fuente principal */
+}
+
+/* Contenedor principal que ocupa toda la altura */
+.container {
+  height: 100%; /* Altura del contenedor del 100% */
+  display: flex; /* Usa flexbox para el diseño */
+  flex-direction: column; /* Organiza los elementos en columna */
+}
+
+/* Contenedor para las imágenes */
+.image-container {
+  display: flex; /* Usa flexbox para el diseño */
+  flex-direction: column; /* Organiza las imágenes en columna */
+  height: 80%; /* Altura del contenedor de imágenes al 80% del contenedor principal */
+  overflow-y: auto; /* Permite scroll vertical si el contenido excede la altura */
+}
+
+/* Contenedor para cada imagen individual */
+.image-wrapper {
+  position: relative; /* Posicionamiento relativo para permitir la colocación absoluta de elementos hijos */
+  width: 100%; /* Ancho completo del contenedor padre */
+  height: 80vh; /* Altura de la imagen al 80% de la altura del viewport */
+  margin-bottom: 10px; /* Espacio inferior entre las imágenes */
+}
+
+/* Estilos para las imágenes dentro del contenedor de imagen */
+.image-wrapper img {
+  width: 100%; /* Ancho completo del contenedor padre */
+  height: 100%; /* Altura completa del contenedor padre */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+}
+
+/* Estilos para el nombre del monumento superpuesto a la imagen */
+.monument-name {
+  position: absolute; /* Posicionamiento absoluto dentro del contenedor relativo */
+  top: 10px; /* Distancia desde la parte superior */
+  left: 10px; /* Distancia desde la izquierda */
+  color: white; /* Color del texto en blanco para contraste con el fondo oscuro */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente para mejorar la legibilidad del texto */
+  padding: 5px 10px; /* Espacio interno alrededor del texto */
+  margin: 0; /* Sin margen adicional */
+}
+
+/* Estilos para el panel de control en la parte inferior de la página */
+.control-panel {
+  height: 20%; /* Altura del panel al 20% del contenedor principal */
+  background-color: lightblue; /* Color de fondo azul claro para el panel */
+  display: flex; /* Usa flexbox para organizar los elementos dentro del panel */
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+  padding: 0 20px; /* Espacio interno horizontal en los lados izquierdo y derecho */
+  
+/* Añadido margen al control panel para separación visual */  
+margin:10px;
+  
+/* Hace el panel más redondeado */  
+border-radius:15px;
+}
+
+/* Estilos comunes para los botones en el panel de control (botón de retroceso y menú) */
+.back-button, .menu-button {
+    background: none; /* Sin fondo por defecto (transparente) */
+    border: none; /* Sin borde por defecto (limpio) */
+    font-size: 24px; /* Tamaño de fuente grande para visibilidad */
+    cursor: pointer; /* Cambia el cursor a puntero al pasar sobre el botón */
+}
+
+/* Estilos para el campo de entrada de búsqueda en el panel de control */
+.search-input {
+    flex-grow: 1; /* Permite que el input ocupe todo el espacio restante disponible en el panel */
+    margin: 0 20px; /* Margen horizontal a ambos lados del input de búsqueda */
+    padding: 10px; /* Espacio interno alrededor del texto dentro del input */
+    border: none; /* Sin borde por defecto (limpio) */
+    border-radius: 5px; /* Bordes ligeramente redondeados para suavidad visual */
+    background-color: white; /* Fondo blanco para el input de búsqueda, asegurando legibilidad del texto ingresado */ 
+}

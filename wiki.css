@@ -1,0 +1,180 @@
+/* Estilos generales del cuerpo de la página */
+body {
+    min-height: 100vh;
+    /* Altura mínima del 100% del viewport */
+    margin: 0;
+    /* Elimina el margen predeterminado */
+    padding: 50px 0 70px;
+    /* Padding superior e inferior, dejando espacio para la barra de navegación */
+    background: linear-gradient(to bottom, rgba(173, 216, 230, 0.5), rgba(173, 216, 230, 1));
+    /* Fondo con gradiente azul claro */
+    display: flex;
+    /* Usa flexbox para el diseño */
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+    align-items: flex-start;
+    /* Alinea el contenido al inicio verticalmente */
+    color: #333;
+    /* Color de texto predeterminado */
+    font-family: 'Montserrat', sans-serif;
+    /* Fuente principal */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 400px;
+    /* Ancho máximo del contenedor */
+    padding: 20px;
+    /* Espacio interno */
+    min-height: calc(100vh - 120px);
+    /* Altura mínima, restando el padding del body */
+    overflow-y: auto;
+    /* Permite scroll vertical si el contenido excede la altura */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Fondo blanco semitransparente */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    backdrop-filter: blur(5px);
+    /* Efecto de desenfoque en el fondo */
+}
+
+/* Estilos para las tarjetas de ciudades */
+.city-card {
+    text-align: center;
+    /* Centra el contenido de la tarjeta */
+    margin-bottom: 25px;
+    /* Espacio entre tarjetas */
+    transition: transform 0.2s ease;
+    /* Transición suave para el efecto hover */
+}
+
+/* Efecto hover para las tarjetas de ciudades */
+.city-card:hover {
+    transform: translateY(-3px);
+    /* Eleva ligeramente la tarjeta al pasar el cursor */
+}
+
+/* Estilos para las imágenes de las ciudades */
+.city-card img {
+    width: 200px;
+    /* Ancho fijo */
+    height: 100px;
+    /* Altura fija */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    object-fit: cover;
+    /* Asegura que la imagen cubra el área sin distorsionarse */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+}
+
+/* Estilos para el nombre de la ciudad */
+.nombreciudad {
+    margin-top: 12px;
+    /* Espacio superior */
+    font-weight: bold;
+    /* Texto en negrita */
+    color: #2c3e50;
+    /* Color de texto más oscuro para mejor contraste */
+}
+
+/* Estilos para la barra de navegación */
+.barranav {
+    position: fixed;
+    /* Fija la barra en la parte inferior */
+    bottom: 0;
+    /* Alinea al fondo */
+    left: 0;
+    /* Alinea a la izquierda */
+    right: 0;
+    /* Alinea a la derecha */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Fondo blanco semitransparente */
+    display: flex;
+    /* Usa flexbox */
+    justify-content: space-between;
+    /* Distribuye el espacio entre los elementos */
+    align-items: center;
+    /* Alinea verticalmente al centro */
+    padding: 12px;
+    /* Espacio interno */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra superior */
+    border-radius: 20px 20px 0 0;
+    /* Bordes redondeados en la parte superior */
+}
+
+/* Estilos para los botones en la barra de navegación */
+.barranav button {
+    flex: 0 0 auto;
+    /* Evita que los botones se estiren */
+    padding: 10px 15px;
+    /* Espacio interno */
+    border: 1px solid #ddd;
+    /* Borde fino */
+    border-radius: 20px;
+    /* Bordes redondeados */
+    font-size: 14px;
+    /* Tamaño de fuente */
+    margin: 0 5px;
+    /* Margen horizontal */
+    white-space: nowrap;
+    /* Evita que el texto se rompa en varias líneas */
+    background-color: #f8f9fa;
+    /* Color de fondo claro */
+    transition: background-color 0.2s ease;
+    /* Transición suave para el hover */
+}
+
+/* Efecto hover para los botones */
+.barranav button:hover {
+    background-color: #e9ecef;
+    /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* Estilos para la barra de búsqueda */
+.search-bar {
+    flex: 1;
+    /* Ocupa el espacio restante */
+    margin: 0 5px;
+    /* Margen horizontal */
+    padding: 10px 15px;
+    /* Espacio interno */
+    border: 1px solid #ddd;
+    /* Borde fino */
+    border-radius: 20px;
+    /* Bordes redondeados */
+    font-size: 14px;
+    /* Tamaño de fuente */
+    background-color: #fff;
+    /* Fondo blanco */
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .barranav {
+        flex-wrap: nowrap;
+        /* Evita que los elementos se envuelvan */
+        padding: 10px;
+        /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .barranav button {
+        padding: 8px 12px;
+        /* Reduce el padding de los botones */
+        font-size: 12px;
+        /* Reduce el tamaño de fuente de los botones */
+    }
+
+    .search-bar {
+        max-width: 50%;
+        /* Limita el ancho del input de búsqueda */
+        padding: 8px 12px;
+        /* Reduce el padding del input de búsqueda */
+    }
+}
